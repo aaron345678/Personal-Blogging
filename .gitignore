@@ -1,0 +1,29 @@
+# Environment variables / secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Django
+*.log
+db.sqlite3
+/staticfiles/
+/media/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
