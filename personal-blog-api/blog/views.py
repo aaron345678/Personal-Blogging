@@ -10,5 +10,5 @@ class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all().order_by('-published_at')
     serializer_class = ArticleSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter]
-    filterset_fields = ['tags_name','published_at']
+    filterset_fields = ['tags__name','published_at']
     order_fields = ['published_at','created_at','title']

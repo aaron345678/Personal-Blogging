@@ -12,5 +12,6 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['id','title','slug','content','tags','tags_ids','published_at,created_at,updated_at']
-        read_only_fields=['slug','created_at','updated_at']
+        fields = ['id', 'title', 'slug', 'content', 'tags', 'tag_ids',
+                  'published_at', 'created_at', 'updated_at']
+        read_only_fields = ['slug', 'created_at', 'updated_at']
