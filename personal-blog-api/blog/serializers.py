@@ -8,7 +8,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 class ArticleSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True,read_only=True)
-    tag_ids = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(),source='tags',write_only=True,required=False)
+    tag_ids = serializers.PrimaryKeyRelatedField(queryset=Tag.objects.all(),source='tags',many=True,write_only=True,required=False)
 
     class Meta:
         model = Article
